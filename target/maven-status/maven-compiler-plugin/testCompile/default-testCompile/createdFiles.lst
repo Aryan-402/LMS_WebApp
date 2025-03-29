@@ -1,0 +1,6 @@
+com/aryan/SignupServletTest.class
+com/aryan/DatabaseConnectionTest.class
+stepDefinitions/LoginSteps.class
+runners/TestRunner.class
+stepDefinitions/SignupSteps.class
+com/aryan/LoginServletTest.class
