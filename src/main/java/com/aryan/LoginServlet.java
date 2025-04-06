@@ -34,6 +34,7 @@ public class LoginServlet extends HttpServlet {
                 if (storedHashedPassword.equals(hashedPassword)) {
                     HttpSession session = request.getSession();
                     session.setAttribute("fullName", fullName); // Store full name
+                    session.setAttribute("username", username); // Store username
                     session.setMaxInactiveInterval(3600); // Set timeout for 1 hour
                     response.sendRedirect(request.getContextPath() + "/welcome.jsp");
                 } else {

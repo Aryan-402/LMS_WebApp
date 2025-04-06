@@ -71,6 +71,7 @@
       margin-left: 250px;
       width: calc(100% - 250px);
       padding: 20px;
+      overflow-y: auto;
     }
     .navbar {
       background-color: white;
@@ -95,17 +96,16 @@
       font-weight: bold;
     }
 
-    /* Responsive Design */
     @media (max-width: 768px) {
       .content {
-        margin-left: 0; /* Remove fixed margin for small screens */
+        margin-left: 0;
         width: 100%;
       }
     }
 
     @media (max-width: 576px) {
       .navbar {
-        flex-direction: column; /* Stack navbar content */
+        flex-direction: column;
         text-align: center;
       }
       .profile-section {
@@ -174,6 +174,26 @@
         <h2>Dashboard Overview</h2>
         <p>Welcome to your LMS dashboard. Manage courses, students, and reports from here.</p>
       </div>
+    </div>
+
+    <!-- Courses Grid 3 x 4 -->
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 mt-4">
+      <%
+        for (int i = 1; i <= 12; i++) {
+      %>
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="images/java.jpeg" class="card-img-top" alt="Course <%= i %>">
+          <div class="card-body">
+            <h5 class="card-title">Course <%= i %></h5>
+            <p class="card-text">Description for Course <%= i %>. Learn something new!</p>
+            <a href="#" class="btn btn-primary btn-sm">View Course</a>
+          </div>
+        </div>
+      </div>
+      <%
+        }
+      %>
     </div>
   </div>
 </div>
